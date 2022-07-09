@@ -165,7 +165,7 @@ addLayer("ach", {
         },
         21: {
             name: "Bored with the Buyable now?",
-            done() {return (new Decimal (player.zero.upgrades.length).gte("10") && getBuyableAmount('zero', 11) >= 10)},
+            done() return (new Decimal (player.zero.upgrades.length).gte("10") && getBuyableAmount('zero', 11) >= 10)},
             goalTooltip: "Buy 10 Point Buyables with 10 zero upgrades. Reward: Unlock a new Row of upgrades.",
             doneTooltip: "Buy 10 Point Buyables with 10 zero upgrades. Reward: Unlock a new Row of upgrades. (Completed)",
             onComplete() {player[this.layer].points = player[this.layer].points.add(1)}
